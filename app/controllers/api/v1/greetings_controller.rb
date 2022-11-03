@@ -2,7 +2,7 @@ class Api::V1::GreetingsController < ApplicationController
   protect_from_forgery with: :null_session
 
   def index
-    greetings = message.find_by(id: rand(1..5))
+    messages = message.find_by(id: rand(1..5))
     if messages
       render json: messages
     else
