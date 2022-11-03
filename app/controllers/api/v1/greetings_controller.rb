@@ -6,7 +6,7 @@ class Api::V1::GreetingsController < ApplicationController
     if messages
       render json: messages
     else
-      render json:messages.errors, status: :bad_request
+      render json: messages.errors, status: :bad_request
     end
   end
 end
